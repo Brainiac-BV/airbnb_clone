@@ -2,12 +2,11 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#fff',
-        margin: 5,
+        margin: 20,
     },
     image: {
         width: '100%',
-        height: '50%',
+        aspectRatio: 3/2,
         resizeMode: 'cover',
         borderRadius: 10,
     },
