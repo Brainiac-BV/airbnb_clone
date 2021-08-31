@@ -3,20 +3,22 @@ import {View, Image, Text} from 'react-native';
 import styles from './styles';
 
 const Post = (props) => {
+
+    const post = props.post;
+
   return (
     <View style={styles.container}>
-      <Image source={require('../../../assets/images/house.jpg')} style={styles.image} />
+      <Image source={{uri: post.image}} style={styles.image} />
       
-      <Text style={styles.bedrooms}>1 bed 1 bath</Text>
+      <Text style={styles.bedrooms}>{post.bed} beds {post.bedroom} bedrooms</Text>
       <Text style={styles.description}>
-        Long description of an apartment, home or some other shit you can rent
-        here. Never used this before but seems cools.
+        {post.type} {post.title}
       </Text>
       <Text style={styles.prices}>
-          <Text style={styles.oldPrice}>$45 </Text>
-          <Text style={styles.price}>$35 / night </Text>
+          <Text style={styles.oldPrice}>${post.oldPrice} </Text>
+          <Text style={styles.price}>${post.newPrice} / night </Text>
       </Text>
-      <Text style={styles.totalPrice}>$70 total </Text>
+      <Text style={styles.totalPrice}>${post.totalPrice} total </Text>
     </View>
   );
 };
