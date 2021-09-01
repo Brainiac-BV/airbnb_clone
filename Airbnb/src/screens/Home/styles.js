@@ -37,7 +37,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        top: 20,
+        position: 'absolute',
+        top: 50,
         zIndex: 100,
     },
     searchButtonText: {
