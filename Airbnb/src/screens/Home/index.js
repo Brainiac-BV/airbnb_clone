@@ -8,6 +8,7 @@ import {
 import styles from './styles';
 import Fontisto from "react-native-vector-icons/Fontisto"
 import { useNavigation } from '@react-navigation/native';
+import Counter from '../../components/Counter';
 
 const HomeScreen = (props) => {
 
@@ -28,6 +29,8 @@ const HomeScreen = (props) => {
                     <Text style={styles.buttonText}>Press This</Text>
                 </Pressable>
             </ImageBackground>
+
+            <Counter />
         </View>
     );
 };
